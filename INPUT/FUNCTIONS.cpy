@@ -1,0 +1,4 @@
+       INPUT_FUNCTION SECTION.
+           DISPLAY FUNCTION TRIM(INPUT-DATA) " " WITH NO ADVANCING.
+           
+           
