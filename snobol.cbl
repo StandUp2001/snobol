@@ -2,7 +2,7 @@
        PROGRAM-ID. SNOBOL.
        DATA DIVISION.
            WORKING-STORAGE SECTION.
-               COPY "INPUT/DATA".
+               COPY "COPYBOOK/INPUT/DATA".
                77 X PIC 999.
                77 Y PIC 999.
                77 Z PIC 9999.
@@ -34,11 +34,7 @@
                EXIT PROGRAM
        END-EVALUATE.
 
-       IF Z NOT EQUAL TO ZERO
-           DISPLAY "X " TOKEN " Y = " Z
-       END-IF.
-
-       DISPLAY     "Do you want to continue? (Y/N)"
+       DISPLAY "X " TOKEN " Y = " Z
 
        STOP RUN.
 
@@ -59,5 +55,5 @@
            SUBTRACT Y FROM X GIVING Z.
            MOVE "-" TO TOKEN.
        
-       COPY "INPUT/FUNCTIONS".
+       COPY "COPYBOOK/INPUT/FUNCTIONS".
        
