@@ -1,3 +1,2 @@
-       01 INPUT-DATA PIC X(100).
-       
+       01 INPUT_DATA PIC X(100).
        
