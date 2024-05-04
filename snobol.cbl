@@ -1,13 +1,13 @@
        IDENTIFICATION DIVISION.
        PROGRAM-ID. SNOBOL.
        DATA DIVISION.
-           WORKING-STORAGE SECTION.
-               COPY "COPYBOOK/INPUT/DATA".
-               77 X PIC 999.
-               77 Y PIC 999.
-               77 Z PIC 9999.
-               77 FUNCTION_CALL PIC X(3).
-               77 TOKEN PIC X.
+       WORKING-STORAGE SECTION.
+           COPY "COPYBOOK/INPUT/DATA".
+           01 X PIC 999.
+           01 Y PIC 999.
+           01 Z PIC 9999.
+           01 FUNCTION_CALL PIC X(3).
+           01 TOKEN PIC X.
 
        PROCEDURE DIVISION.
 
@@ -25,13 +25,13 @@
        ACCEPT FUNCTION_CALL.
  
        EVALUATE FUNCTION_CALL
-              WHEN "ADD" PERFORM ADDITION
-              WHEN "MUL" PERFORM MULTIPLICATION
-              WHEN "DIV" PERFORM DIVIDER
-              WHEN "SUB" PERFORM SUBTRACTION
-              WHEN OTHER 
-               DISPLAY "Invalid function call"
-               EXIT PROGRAM
+           WHEN "ADD" PERFORM ADDITION
+           WHEN "MUL" PERFORM MULTIPLICATION
+           WHEN "DIV" PERFORM DIVIDER
+           WHEN "SUB" PERFORM SUBTRACTION
+           WHEN OTHER 
+            DISPLAY "Invalid function call"
+            EXIT PROGRAM
        END-EVALUATE.
 
        DISPLAY "X " TOKEN " Y = " Z
